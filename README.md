@@ -17,8 +17,7 @@ Reddit Data Scraper [RDS]: A program to scrape historical data from reddit.
 The required inputs to generate a dataset are:
 - subreddit
 - date range
-- dataset export path
-- dataset export type (currently supports csv, xlsx)
+- dataset export path/dataset export type (currently supports csv, xlsx)
 - daily post limit
 
 

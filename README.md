@@ -9,14 +9,37 @@
 
 
 # RDS
-Reddit Data Scraper [RDS]: A program to scrape historical text data from reddit.
+Reddit Data Scraper [RDS]: A program to scrape historical data from reddit. 
 
 
+### Description
+
+The required inputs to generate a dataset are:
+- subreddit
+- date range
+- dataset export path
+- dataset export type (currently supports csv, xlsx)
+- daily post limit
 
 
+The fields of data for each post currently included in a generated dataset are:
 
+- Author
+- Post date
+- UTC creation datetime
+- Post ID
+- Number of comments
+- Upvotes
+- Subreddit
+- Post title
+- Upvote ratio
+- Post URL
+- Downvotes
+- Controversiality
 
 ### Dependencies
+
+### Quickstart
 
 ### Notes
 *Downvotes*: Because downvotes are not actually given, downvotes are calculated using the number of upvotes and the upvote ratio. Often this calculation results in a non-integer value, thus, one should not treat downvotes as exact, as they are often rounded from float values.

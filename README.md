@@ -9,7 +9,7 @@
 
 
 # RDS
-Reddit Data Scraper [RDS]: A program to scrape historical data from reddit. 
+Reddit Data Scraper [RDS]: A program to scrape historical data from reddit. *Quick note: I will need to refactor the code at some point, it's not as good as it could be ATM*
 
 
 ### Description

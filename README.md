@@ -47,3 +47,7 @@ The fields of data for each post currently included in a generated dataset are:
 
 ![](images/controversial_metric_func.png)
 
+
+### TODO
+
+- Add command line program functionality

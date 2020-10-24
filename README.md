@@ -50,8 +50,7 @@ The fields of data for each post currently included in a generated dataset are:
 ### Quickstart
 
 ### Notes
-*Voting*
-PRAW says that the "score" metric they return for a post is not actually the score for a post, but the number of upvotes: https://praw.readthedocs.io/en/latest/code_overview/models/submission.html.
+*Voting*: PRAW says that the "score" metric they return for a post is not actually the score for a post, but the number of upvotes: https://praw.readthedocs.io/en/latest/code_overview/models/submission.html.
 
 This is impossible for the simple reason that posts which PRAW says have zero upvotes often have non-zero upvote_ratios. This strongly suggests that score is actually being recorded, and that reddit modifies the data so it never goes below zero.
 

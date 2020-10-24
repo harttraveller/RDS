@@ -9,7 +9,17 @@
 
 
 # RDS
-Reddit Data Scraper [RDS]: A program to scrape historical data from reddit. *Quick note: I will need to refactor the code at some point, it's not as good as it could be ATM*
+Reddit Data Scraper [RDS]: A program to scrape historical data from reddit. For use in jupyter notebooks. *Quick note: I will need to refactor the code at some point, it's not as good as it could be ATM*
+
+### Quickstart
+
+*Step 1:* Get reddit credentials/api key: Youtube video link *still need to add*
+
+*Step 2:* Clone repository into working directory, either with git or by downloading the zip
+
+*Step 3:* move into RDS repository in command line and run pip install -r requirements.txt
+
+*Step 4*: refer to the following jupyter notebook tutorial (included in repository) *still need to add*
 
 
 ### Description
@@ -46,8 +56,6 @@ The fields of data for each post currently included in a generated dataset are:
         os (default)
         datetime (default)
         IPython (you will have if you are using jupyter notebooks)
-
-### Quickstart
 
 ### Notes
 *Voting*: PRAW says that the "score" metric they return for a post is not actually the score for a post, but the number of upvotes: https://praw.readthedocs.io/en/latest/code_overview/models/submission.html.

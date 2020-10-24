@@ -66,3 +66,4 @@ Because we can't actually get the number of downvotes or upvotes for a post thro
 - Add command line program functionality
 - Investigate score/upvote metric stuff
 - Add ability to scrape comments
+- refactor and remove redundant code

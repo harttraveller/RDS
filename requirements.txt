@@ -1,0 +1,5 @@
+praw
+psaw
+pandas
+numpy
+tqdm

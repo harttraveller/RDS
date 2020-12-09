@@ -13,13 +13,13 @@ Reddit Data Scraper [RDS]: A program to scrape historical data from reddit. For 
 
 ### Quickstart
 
-*Step 1:* Get reddit credentials/api key: Youtube video link *still need to add*
+*Step 1:* Get reddit credentials/api key, if using old reddit can be found under preferences -> apps
 
 *Step 2:* Clone repository into working directory, either with git or by downloading the zip
 
 *Step 3:* move into RDS repository in command line and run pip install -r requirements.txt
 
-*Step 4*: refer to the following jupyter notebook tutorial (included in repository) *still need to add*
+*Step 4*: refer to the following jupyter notebook tutorial (included in repository)
 
 
 ### Description

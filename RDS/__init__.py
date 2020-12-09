@@ -48,7 +48,7 @@ class RDS:
     def __calc_votes(self,score,upvote_ratio):
         "returns upvotes, downvotes"
         if score == 0:
-            return np.nan,np.nan
+            return 0,0
         else:
             upvotes = round(score/upvote_ratio)
             downvotes = upvotes-score

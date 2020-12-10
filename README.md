@@ -50,6 +50,7 @@ The fields of data for each post currently included in a generated dataset are:
 
         praw
         psaw
+        sympy
         pandas
         numpy
         tqdm

@@ -6,6 +6,8 @@ import pandas as pd
 import numpy as np
 from tqdm import tqdm
 from IPython.display import clear_output
+import math
+from sympy import *
 
 class RDS:
     def __init__(self,client_id = None,client_secret = None,user_agent = 'anonymous'):
@@ -45,14 +47,14 @@ class RDS:
         else:
             return 1
 
-    def __calc_votes(self,score,upvote_ratio):
-        "returns upvotes, downvotes"
-        if score == 0:
-            return 0,0
-        else:
-            upvotes = round(score/upvote_ratio)
-            downvotes = upvotes-score
-            return upvotes, downvotes
+	def __calc_votes(self, score, upvote_ratio):
+	    if score == 0:
+	        return 0,0
+	    else:
+	        upvotes,downvotes = symbols('x y')
+	        ups,downs = list(linsolve([upvotes - downvotes - score, upvote_ratio*(upvotes+downvotes) - upvotes],(upvotes,downvotes)))[0]
+	        ups,downs = int(ups),int(downs)
+	        return ups, downs
 
     def __get_single_days_data(self,subreddit,day,limit=100):
         "API limit seems to be 100 right now"
@@ -97,6 +99,7 @@ class RDS:
             upvote_list.append(upvotes)
             downvote_list.append(downvotes)
         
+
         data['downvotes'] = [int(i) for i in downvote_list]
         data['upvotes'] = [int(i) for i in upvote_list]
         data['controversiality'] = [self.__calc_controversiality(i) for i in data['upvote_ratio']]

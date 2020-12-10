@@ -58,6 +58,20 @@ The fields of data for each post currently included in a generated dataset are:
         IPython (you will have if you are using jupyter notebooks)
 
 ### Notes
+*Solving for upvotes and downvotes*: Praw does not actually tell you how many upvotes or downvotes a post has. It simply gives you the score (upvotes minus downvotes), and the upvote ratio (praw docs quote this as: "The percentage of upvotes from all votes on the submission")
+
+Using this information, we can derive a system of linear equations that allows us to solve for the number of upvotes and downvotes however.
+```
+score = upvotes - downvotes
+upvotes = score + downvotes
+upvotes - downvotes - score = 0
+
+upvote_ratio = upvotes/(upvotes+downvotes)
+upvote_ratio*(upvotes+downvotes) = upvotes
+upvotes_ratio*(upvotes+downvotes) - upvotes = 0
+```
+We can then simply plug the system of linear equations into sympy to solve for the number of upvotes and downvotes.
+
 *Controversiality*: The controversiality figure is a simple function that maps the upvote ratio onto a controversiality scale between 0 and 1. It is assumed that upvote ratio values near 0, and near 1, are less controversial because they are either unanimously liked or unanimously disliked. Upvote ratio values near 0.5 would be more controversial, as there is no true agreement as to whether the post in question is worthy of upvotes or downvotes. As such, the function is graphically represented as follows:
 
 ![](images/controversial_metric_func.png)

@@ -50,6 +50,8 @@ class RDS:
     def __calc_votes(self, score, upvote_ratio):
         if score == 0:
             return 0,0
+        elif upvote_ratio == 0.5:
+            return 0,0
         else:
             upvotes,downvotes = symbols('x y')
             ups,downs = list(linsolve([upvotes - downvotes - score, upvote_ratio*(upvotes+downvotes) - upvotes],(upvotes,downvotes)))[0]

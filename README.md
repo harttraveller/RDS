@@ -59,7 +59,7 @@ The fields of data for each post currently included in a generated dataset are:
         IPython (you will have if you are using jupyter notebooks)
 
 ### Notes
-*Solving for upvotes and downvotes*: Praw does not actually tell you how many upvotes or downvotes a post has. It simply gives you the score (upvotes minus downvotes), and the upvote ratio (praw docs quote this as: "The percentage of upvotes from all votes on the submission")
+*Solving for upvotes and downvotes*: Praw does not actually tell you how many upvotes or downvotes a post has. It simply gives you the score (upvotes minus downvotes), and the upvote ratio (praw docs quote this as: "The percentage of upvotes from all votes on the submission", which seems to be saying: "the percentage - calculated by dividing the upvotes of a submission, by the sum of the absolute values of upvotes and downvotes").
 
 Using this information, we can derive a system of linear equations that allows us to solve for the number of upvotes and downvotes however.
 ```

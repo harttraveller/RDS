@@ -73,6 +73,8 @@ upvotes_ratio*(upvotes+downvotes) - upvotes = 0
 ```
 We can then simply plug the system of linear equations into sympy to solve for the number of upvotes and downvotes.
 
+One problem with this, is that it would be logically impossible to have a post with an upvote ratio of 0.5, and a non zero score, as an upvote ratio of 0.5 means 50% of the votes on the submission were upvotes, which in turn means 50% must be downvotes. Unfortunately, it is quite common to see this logical impossibility in the data provided by reddit. Whether it is the reddit engineers ineptitude, or their attempts at obfuscating data, we will never know.
+
 *Controversiality*: The controversiality figure is a simple function that maps the upvote ratio onto a controversiality scale between 0 and 1. It is assumed that upvote ratio values near 0, and near 1, are less controversial because they are either unanimously liked or unanimously disliked. Upvote ratio values near 0.5 would be more controversial, as there is no true agreement as to whether the post in question is worthy of upvotes or downvotes. As such, the function is graphically represented as follows:
 
 ![](images/controversial_metric_func.png)
